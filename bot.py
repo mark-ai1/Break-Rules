@@ -1,3 +1,4 @@
+import os
 import logging
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, CallbackContext
@@ -60,8 +61,8 @@ async def check_availability(update: Update, context: CallbackContext):
 
 # Main function
 def main():
-    # Replace 'YOUR_TELEGRAM_BOT_TOKEN' with your actual bot token
-    application = ApplicationBuilder().token('YOUR_TELEGRAM_BOT_TOKEN').build()
+    # Use environment variable for the token
+    application = ApplicationBuilder().token(os.getenv('TELEGRAM_BOT_TOKEN')).build()
 
     # Add handlers
     application.add_handler(CommandHandler("start", start))
