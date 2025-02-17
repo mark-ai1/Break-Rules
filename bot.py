@@ -60,7 +60,7 @@ async def check_availability(update: Update, context: CallbackContext):
 
 # Main function
 def main():
-    # Replace '7695331037:AAHzI3d3FzOS_PbZ-sFfY4ERvHn5Ors9jYI' with your actual bot token
+    # Replace 'YOUR_TELEGRAM_BOT_TOKEN' with your actual bot token
     application = ApplicationBuilder().token('YOUR_TELEGRAM_BOT_TOKEN').build()
 
     # Add handlers
